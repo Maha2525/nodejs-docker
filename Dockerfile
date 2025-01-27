@@ -1,7 +1,11 @@
-FROM node:16
-WORKDIR /app
+FROM node:19-alpine AS firststage
+WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
-EXPOSE 3000
+
+
+FROM firststage AS final
+RUN npm install --production
+COPY . .
 CMD ["node", "index.js"]
