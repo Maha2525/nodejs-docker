@@ -1,11 +1,12 @@
-FROM node:19-alpine AS firststage
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install
+FROM node:20-alpine AS build
+WORKDIR /app
 COPY . .
-
-
-FROM firststage AS final
 RUN npm install --production
-COPY . .
+
+
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=build /app /app
+EXPOSE 8080
 CMD ["node", "server.js"]
