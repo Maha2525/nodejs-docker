@@ -8,4 +8,4 @@ COPY . .
 FROM firststage AS final
 RUN npm install --production
 COPY . .
-CMD ["node", "index.js"]
+CMD ["node", "server.js"]
