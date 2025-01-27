@@ -4,36 +4,191 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Marketing Agency</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: #2b6cb0;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #234e70;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('https://source.unsplash.com/1200x400/?marketing,technology') no-repeat center/cover;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 10px 0 0;
+    }
+
+    .services, .portfolio {
+      text-align: center;
+    }
+
+    .services h2, .portfolio h2, .contact h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .services .service-item, .portfolio .portfolio-item {
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .services .service-item img, .portfolio .portfolio-item img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .contact {
+      background: #f7fafc;
+      padding: 20px;
+    }
+
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact form input, .contact form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .contact form button {
+      background: #2b6cb0;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #2b6cb0;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero-section">
-    <div class="overlay">
-      <h1>Grow Your Business with Us</h1>
-      <p>We provide innovative digital marketing solutions to scale your business effectively.</p>
-      <a href="#services" class="cta-btn">Our Services</a>
-    </div>
+  <header>
+    <h1>Digital Marketing Agency</h1>
+    <p>Your partner in growing your online presence</p>
   </header>
 
-  <section id="services" class="services-section">
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>We Help Businesses Grow Online</h2>
+    <p>Discover the power of digital marketing with our expert team.</p>
+  </section>
+
+  <section id="services" class="services">
     <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <img src="https://via.placeholder.com/150/00aaff/ffffff?text=SEO" alt="SEO">
-        <h3>Search Engine Optimization</h3>
-        <p>Boost your website's visibility on search engines and attract more traffic.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://via.placeholder.com/150/ffaa00/ffffff?text=Social+Media" alt="Social Media Marketing">
-        <h3>Social Media Marketing</h3>
-        <p>Engage your audience on platforms like Facebook, Instagram, and Twitter.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://via.placeholder.com/150/ff0066/ffffff?text=Content" alt="Content Marketing">
-        <h3>Content Marketing</h3>
-        <p>Craft compelling content that drives engagement and builds brand trust.</p>
-      </div>
+    <div class="service-item">
+      <img src="https://source.unsplash.com/300x200/?seo" alt="SEO Service">
+      <h3>SEO Optimization</h3>
+      <p>Boost your website's visibility on search engines.</p>
     </div>
+    <div class="service-item">
+      <img src="https://source.unsplash.com/300x200/?social-media" alt="Social Media Marketing">
+      <h3>Social Media Marketing</h3>
+      <p>Engage with your audience on popular social platforms.</p>
+    </div>
+    <div class="service-item">
+      <img src="https://source.unsplash.com/300x200/?content-marketing" alt="Content Marketing">
+      <h3>Content Marketing</h3>
+      <p>Deliver valuable content to attract and retain customers.</p>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Our Portfolio</h2>
+    <div class="portfolio-item">
+      <img src="https://source.unsplash.com/300x200/?website" alt="Project 1">
+      <p>Website Redesign for Tech Co.</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://source.unsplash.com/300x200/?branding" alt="Project 2">
+      <p>Branding Campaign for Startups</p>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://source.unsplash.com/300x200/?marketing-campaign" alt="Project 3">
+      <p>Digital Marketing for E-commerce</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
